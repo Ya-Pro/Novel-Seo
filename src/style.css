@@ -1,0 +1,1386 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+:root {
+  --nav: white;
+  --text: rgb(52, 58, 64);
+  --connect: rgb(244, 187, 14);
+  --black: black;
+  --silver: rgb(134, 142, 150);
+  --novel: rgb(29, 184, 248);
+  --whatsapp: rgb(16, 208, 88);
+  --border-footer: rgb(57, 57, 91);
+  --hovericons-footer: rgb(28, 28, 53);
+  --paddding: 7.5%;
+  --services-border: rgb(240, 240, 240);
+  --background: rgb(245, 245, 245);
+  --exclamation: rgb(26, 165, 223);
+  --borders: rgb(229, 229, 229);
+}
+@font-face {
+  font-family: DGA;
+  src: url(../assets/DGAgnadeen-Extrabold.ttf);
+}
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-family: DGA;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem var(--paddding);
+  height: 3.5rem;
+  border-top: 0.5em solid var(--border-footer);
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  background-color: var(--nav);
+}
+header .logo {
+  padding-top: 1rem;
+  cursor: pointer;
+}
+header .logo img {
+  width: 7.55rem;
+  height: 2.25rem;
+}
+header .menu {
+  margin-right: 3rem;
+}
+header .menu li {
+  margin: 0 0.2rem;
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+}
+header .menu li a {
+  font-size: 0.7rem;
+  color: var(--text);
+  position: relative;
+}
+header .menu li:first-child a {
+  color: var(--novel);
+}
+header .menu li a::before {
+  content: "";
+  position: absolute;
+  height: 0.07rem;
+  width: 0;
+  background-color: var(--text);
+  transition: 0.4s;
+  top: 1.3rem;
+}
+header .menu li:hover a::before {
+  width: 100%;
+}
+header .menu li:first-child:hover a::before {
+  background-color: var(--novel);
+}
+header .contact {
+  margin-right: auto;
+  display: flex;
+}
+header .contact a {
+  display: inline-block;
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 0.3rem;
+  color: var(--nav);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.25rem;
+}
+header .contact a i {
+  font-size: 0.8rem;
+}
+header .contact a {
+  background-color: var(--border-footer);
+}
+header .contact a:nth-child(1) {
+  background-color: var(--novel);
+}
+header .contact a:nth-child(2) {
+  background-color: var(--whatsapp);
+}
+header .contact a:nth-child(n + 3):nth-child(-n + 5):hover {
+  background-color: var(--hovericons-footer);
+}
+.background {
+  width: 100%;
+  padding: 2rem;
+}
+.background img {
+  width: 100%;
+}
+.content {
+  position: absolute;
+  top: 16rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.content h2,
+span,
+a {
+  color: var(--nav);
+}
+.content h2 {
+  font-size: 1.6rem;
+}
+.content span {
+  font-size: 0.85rem;
+}
+.content .connection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content .connection span {
+  width: 1.5rem;
+  margin: 1rem 0.5rem;
+  height: 0.04rem;
+  background-color: var(--nav);
+}
+/* the end of the top section */
+/* the beginning of about section */
+.about {
+  background-color: var(--novel);
+  display: grid;
+  padding: 0 var(--paddding);
+  height: fit-content;
+  grid-template-columns: repeat(2,1fr);
+}
+.about .novel-logo {
+  width: 30rem;
+  background-image: url(novel-logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.novel-logo img {
+  padding-left: 10rem;
+  object-fit: contain;
+  width: 110%;
+  height: 100%;
+}
+.about .about-content {
+  color: var(--nav);
+  padding: 1rem 0;
+  max-width: 35rem;
+  line-height: 1.6;
+  display: grid;
+}
+.about .about-content h2 {
+  font-size: 1.15rem;
+}
+.about .about-content p {
+  font-size: 0.7rem;
+  margin: 0.5rem 0;
+  text-align: justify;
+}
+.about .about-content li {
+  font-size: 0.7rem;
+}
+.about .about-content li i {
+  font-size: 0.6rem;
+  padding: 0.2rem;
+  letter-spacing: 1px;
+}
+/* the end of about section */
+/*---------------------------- the beginning of the services section --------------------------------------------------------------------*/
+.services {
+  background-color: var(--nav);
+  padding: var(--padding) var(--paddding);
+}
+.services .head,
+.questions .head,
+.team .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2.5rem;
+}
+.services h2,
+.questions h2,
+.team h2 {
+  color: var(--novel);
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+}
+.services span,
+.questions .head span,
+.team span {
+  display: inline-block;
+  width: 1.5rem;
+  margin: 0 0.4rem;
+  height: 0.03rem;
+  background-color: var(--hovericons-footer);
+}
+.services .boxs {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 18.43rem));
+  grid-template-rows: repeat(auto-fit, minmax(10rem, 16.5rem));
+  gap: 1rem;
+  background-color: var(--nav);
+}
+.services .boxs .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: var(--nav);
+  border: 0.05rem solid var(--services-border);
+  row-gap: 0.5rem;
+  padding: 1.2rem;
+}
+.services .boxs .box .img img {
+  width: 4.9rem;
+  height: 4.7rem;
+}
+.services .box a h3 {
+  color: var(--novel);
+  font-size: 0.95rem;
+}
+.services .box p {
+  font-size: 0.7rem;
+  color: var(--silver);
+  text-align: center;
+}
+.services .box a:last-child {
+  display: inline-block;
+  background-color: var(--novel);
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  width: 98%;
+  max-width: 16rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.2rem;
+  opacity: 0.7;
+  transition: opacity 0.4s;
+}
+.services .box a:last-child:hover {
+  opacity: 1;
+}
+.services .box a i {
+  font-size: 0.6rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  border: 0.1rem solid var(--nav);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* the end of the services section */
+/* the beginning of the questions section part */
+.questions {
+  height: fit-content;
+  padding: 2.5rem var(--paddding);
+  background-color: var(--background);
+}
+/* the part of the slider */
+.questions .slider {
+  width: 100%;
+  height: 8rem;
+  position: relative;
+  overflow: hidden;
+}
+.questions .slider .slides {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+}
+.slider .slides input {
+  display: none;
+}
+.questions .slides .slide {
+  width: 15.5%;
+  transition: 1s;
+  margin: 0 0.4rem;
+}
+.questions .slides .slide img {
+  width: 8.8rem;
+  height: 4rem;
+  background-color: var(--nav);
+  border: 0.06rem solid var(--borders);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.slides .manual {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slides .manual label {
+  width: 0.8em;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 0.07rem solid var(--borders);
+  background-color: var(--nav);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.slides .manual label:hover {
+  background-color: var(--novel);
+}
+.slides .manual label:not(:first-child) {
+  margin-right: 0.5rem;
+}
+#radio1:checked ~ .first {
+  margin-right: 0;
+}
+#radio2:checked ~ .first {
+  margin-right: -9.4rem;
+}
+#radio3:checked ~ .first {
+  margin-right: -18.8rem;
+}
+#radio4:checked ~ .first {
+  margin-right: -28.2rem;
+}
+#radio5:checked ~ .first {
+  margin-right: -37.6rem;
+}
+#radio6:checked ~ .first {
+  margin-right: -47.2rem;
+}
+#radio7:checked ~ .first {
+  margin-right: -57rem;
+}
+#radio8:checked ~ .first {
+  margin-right: -67rem;
+}
+/* the beginning of the automatic */
+.automatic {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.automatic div {
+  width: 0.8em;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 0.07rem solid var(--borders);
+  background-color: var(--nav);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.automatic div:not(:first-child) {
+  margin-right: 0.5rem;
+}
+#radio1:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+#radio2:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+#radio3:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+#radio4:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+#radio5:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+#radio6:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+#radio7:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+#radio8:checked ~ .automatic div {
+  background-color: var(--nav);
+}
+/* the end of the automatic */
+/* the end of the slider part section__________________
+_____________________________________________________________________ */
+/* the beginning of important questions and cards */
+.questions h2 {
+  color: var(--novel);
+  text-align: center;
+}
+.questions p {
+  color: var(--text);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.questions .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 18.43rem));
+  gap: 1rem;
+}
+.cards .card .content-card {
+  background-color: var(--nav);
+  display: flex;
+  flex-direction: column;
+}
+.cards .card .content-card h3 {
+  padding: 0 0.8rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  height: 2.35rem;
+  font-size: 0.8rem;
+  margin: 0.05rem 0;
+  border: 0.07rem solid var(--borders);
+  cursor: pointer;
+}
+.cards .card .content-card h3.background {
+  background-color: var(--borders);
+}
+.cards .card .content-card p {
+  border: 0.07rem solid var(--borders);
+  font-size: 0.7rem;
+  text-align: right;
+  padding: 1.5rem;
+  transition: all 1s;
+  display: none;
+}
+.cards .card .content-card p.block {
+  display: block;
+}
+/* the end of important questions and cards */
+/* the end of the questions section part */
+/*  the beginning of the courses part */
+.courses {
+  padding: var(--padding) 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.courses img {
+  width: 110%;
+  height: 100%;
+}
+.courses .content-course {
+  width: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  color: var(--nav);
+  padding: 0;
+  right: var(--paddding);
+}
+.courses .content-course p {
+  margin-top: 0.5rem;
+  width: 36.5rem;
+  font-size: 0.73rem;
+}
+.courses .all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.courses a {
+  color: var(--nav);
+  padding: 0.5rem 2rem;
+  background-color: var(--novel);
+  height: 2rem;
+  font-size: 0.8rem;
+  position: absolute;
+  left: var(--paddding);
+  border-radius: 0.5rem;
+}
+/*  the end of the courses part */
+/* the beginning of the partners section */
+.partners {
+  padding: var(--padding);
+  background-color: var(--nav);
+  display: flex;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  padding: 1rem var(--paddding) 1rem 6%;
+}
+.partners .right {
+  width: 100%;
+  max-width: 33.3rem;
+}
+.partners .right h1 {
+  color: var(--novel);
+}
+.partners .right p {
+  font-size: 0.7rem;
+  color: var(--text);
+  text-align: right;
+  margin-bottom: 0.8rem;
+}
+.partners .right img {
+  width: 33.5rem;
+  height: 18.5rem;
+}
+.partners .left {
+  padding-top: 2rem;
+  width: 100%;
+  max-width: 24.6rem;
+  display: grid;
+  row-gap: 0.8rem;
+}
+.partners .left .left-content {
+  border: 0.07rem solid var(--borders);
+  border-radius: 0.6rem;
+  padding: 0.8rem 1rem;
+  height: 9.75rem;
+}
+.partners .left .left-content p {
+  font-size: 0.7rem;
+  text-align: right;
+  color: var(--text);
+}
+.partners .left-content h3 {
+  margin-right: 0.2rem;
+  font-size: 0.8rem;
+}
+.partners .left-content img {
+  width: 3rem;
+  height: 3rem;
+}
+/* the end of the partners section */
+/* the beginning of the novel-seo team section */
+.team {
+  background-color: var(--background);
+  width: 100%;
+}
+.team p {
+  text-align: center;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "prev";
+  font-size: 0.9rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--novel);
+  opacity: 0;
+  transition: 0.4s;
+}
+.swiper-button-next::after,
+.swiper-rtl .swiper-button-prev::after {
+  content: "next";
+  font-size: 0.9rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--novel);
+  opacity: 0;
+  transition: 0.7s;
+}
+.team .swiper {
+  padding: 1rem 0;
+  max-width: 57rem;
+  display: flex;
+  overflow-x: hidden;
+}
+.team .swiper:hover .swiper-button-next::after {
+  opacity: 1;
+}
+.team .swiper:hover .swiper-button-prev::after {
+  opacity: 1;
+}
+.team .cards-container .card {
+  max-width: 18.5rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: var(--nav);
+  height: 17.5rem;
+  border: 0.07rem solid var(--borders);
+  border-radius: 0.7rem;
+  transition: 0.4s;
+}
+.team .cards-container input {
+  display: none;
+}
+/* #card1:checked ~ .first-card {
+  margin-right: 0;
+}
+#card2:checked ~ .first-card {
+  margin-right: -19rem;
+}
+#card3:checked ~ .first-card {
+  margin-right: -38rem;
+}
+#card4:checked ~ .first-card {
+  margin-right: -57rem;
+}
+#card5:checked ~ .first-card {
+  margin-right: -76rem;
+}
+#card6:checked ~ .first-card {
+  margin-right: -96rem;
+}
+#card7:checked ~ .first-card {
+  margin-right: -115rem;
+}
+#card8:checked ~ .first-card {
+  margin-right: -134rem;
+}
+#card9:checked ~ .first-card {
+  margin-right: -153rem;
+}
+#card10:checked ~ .first-card {
+  margin-right: -172rem;
+}
+#card11:checked ~ .first-card {
+  margin-right: -191rem;
+}
+#card12:checked ~ .first-card {
+  margin-right: -210rem;
+}
+#card13:checked ~ .first-card {
+  margin-right: -229rem;
+}
+#card14:checked ~ .first-card {
+  margin-right: -248rem;
+}
+#card15:checked ~ .first-card {
+  margin-right: -267rem;
+}
+#card16:checked ~ .first-card {
+  margin-right: -286rem;
+}
+#card17:checked ~ .first-card {
+  margin-right: -305rem;
+} */
+
+/* #card8:checked ~ .first {
+  margin-right: -rem;
+} */
+.team .cards-container .card img {
+  margin-top: 2rem;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.team .cards-container .card h6 {
+  margin: 0.2rem 0;
+}
+.team .cards-container .card p {
+  padding: 1rem;
+  font-size: 0.65rem;
+  color: var(--text);
+}
+.team .cards-container .card a {
+  color: var(--novel);
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 2.35rem;
+  font-size: 0.8rem;
+  line-height: 2.5;
+  border-top: 0.08rem solid var(--borders);
+}
+
+/* the end of the novel-seo team section */
+/* the beginning of the footer section part */
+footer {
+  padding: 1rem var(--paddding);
+  background-color: var(--hovericons-footer);
+  display: flex;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+}
+footer h3 {
+  font-size: 1.1rem;
+  color: var(--novel);
+  margin-bottom: 0.5rem;
+}
+footer .about-novel {
+  width: 100%;
+  position: relative;
+  max-width: 20rem;
+}
+footer .about-novel p {
+  font-size: 0.7rem;
+  line-height: 1.8;
+  color: var(--nav);
+}
+footer .important-links {
+  width: 100%;
+  max-width: 8rem;
+}
+footer li a,
+p i,
+p {
+  font-size: 0.7rem;
+  color: var(--nav);
+}
+footer p {
+  display: flex;
+  column-gap: 0.3rem;
+}
+footer .contact-us {
+  width: 100%;
+  max-width: 13rem;
+}
+footer .contact-us p {
+  margin-top: 0.4rem;
+  width: 100%;
+}
+footer .news {
+  width: 100%;
+  max-width: 13rem;
+}
+footer .news input[type="email"] {
+  margin-top: 1rem;
+  display: block;
+  width: 13rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+}
+footer .news p {
+  width: 100%;
+}
+footer .news button {
+  background-color: var(--novel);
+  padding: 0.5rem 2rem;
+  font-size: 0.8rem;
+  color: var(--nav);
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+footer .news .social {
+  display: flex;
+  column-gap: 0.7rem;
+}
+/* the end of the footer section part */
+/* copy-write section end */
+.copywrite {
+  height: 3rem;
+  background-color: var(--hovericons-footer);
+  border-top: 0.05rem solid var(--borders);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* copy-write section end */
+/* the work of the javascript  */
+/*  the beginning of the up-button  */
+.up-button {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 99999;
+}
+.up-button i {
+  font-size: 1.5rem;
+  color: var(--nav);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--novel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* the end of the up-button */
+/* the beginning of the animation section of observer */
+/* .hidden {
+  transform: scale(0.5);
+  transition: 0.7s;
+} */
+/* .show {
+  transform: scale(1);
+} */
+/* the end of the animation section of observer */
+/* the beginning of the cookie part */
+.cookie {
+  width: 100%;
+  margin: auto;
+  background-color: var(--novel);
+  padding: 0.5rem var(--paddding) 1rem;
+  color: var(--nav);
+  position: fixed;
+  z-index: 9999;
+  bottom: -9rem;
+  transition: 0.8s;
+}
+.cookie.show {
+  bottom: 0;
+}
+.cookie h3,
+p {
+  padding-top: 0.6rem;
+}
+.cookie p {
+  font-size: 0.9rem;
+}
+.cookie .btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.cookie button {
+  display: inline-block;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--nav);
+  color: var(--novel);
+  margin: 0 0.7rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.cookie button:hover {
+  background-color: var(--hovericons-footer);
+  color: white;
+}
+/* the end of the cookie part */
+/* the part of responsive */
+#hamburger {
+  font-size: 1.5rem;
+  padding: .8rem ;
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 12px;
+  }
+  #hamburger {
+    display: block;
+    }
+.menu {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: -100%;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--novel);
+    transition: all 0.5s;
+    align-items: center;
+  } .menu.active {
+    right: -10%;
+  }
+header .menu li a {
+  margin: .5rem 0;
+  display: block;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+header .menu li:hover a {
+  transform: translateY(.5rem);
+}
+  .content .connection span {
+    margin-top: 0.5rem;
+  }
+  .content span,
+  a {
+    font-size: 1rem;
+  }
+  .about,
+  .services {
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .services .boxs {
+    justify-content: center;
+  }
+  .questions .slides .slide img {
+    width: 5rem;
+    height: 3rem;
+  }
+  .questions .cards {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 25.43rem));
+    justify-content: center;
+  }
+  .courses .content-course h3 {
+    font-size: 1.3rem;;
+  }
+  .courses .content-course p {
+    margin-top: 0;
+    width: 60%;
+    font-size: 1rem;
+  }
+  .partners {
+    height: fit-content;
+  }
+  .partners .left {
+    margin: auto;
+  }
+  .team .swiper {
+    max-width: 30rem;
+  }
+  .team .cards-container .card a {
+    font-size: .9rem;
+  }
+  footer {
+    height: fit-content;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  footer .about-novel {
+    max-width: 30rem;
+  }
+  footer h3 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+  }
+  footer .contact-us {
+    max-width: 14rem;
+  }
+  footer .contact-us p {
+    font-size: 1.1rem;
+  }
+  .links li {
+    margin-top: 0.5rem;
+  }
+  .links li a {
+    font-size: 1rem;
+  }
+  footer .about-novel p {
+    font-size: 1rem;
+  }
+  footer .news {
+    max-width: 30rem;
+  }
+  footer .important-links {
+    max-width: 12rem;
+  }
+  footer .news p {
+    font-size: 0.9rem;
+  }
+  footer .news .social {
+    padding-bottom: 1rem;
+  }
+  footer .news button {
+    font-size: 1.5rem;
+  }
+  .copywrite p {
+    font-size: 1.1rem;
+  }
+  .social a i {
+    font-size: 2rem;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .services .boxs {
+    grid-template-columns: 1fr;
+  }
+  .team .cards-container .card {
+    max-width: 100%;
+  }
+  .about .about-content {
+    max-width: 90%;
+  }
+  .partners .right img {
+    max-width: 90%;
+  }
+  .courses img {
+    max-width: 90%;
+  }
+
+}
+ @media screen and (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+  #hamburger {
+    display: block;
+    }    
+.menu {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: -100%;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--novel);
+    transition: all 0.5s;
+    align-items: center;
+  } .menu.active {
+    right: -10%;
+  }
+header .menu li a {
+  margin: .5rem 0;
+  display: block;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+header .menu li:hover a {
+  transform: translateY(.5rem);
+}
+  .content .connection span {
+    margin-top: 0.5rem;
+  }
+  .content span,
+  a {
+    font-size: 0.7rem;
+  }
+  .about,
+  .services {
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .services .boxs {
+    justify-content: center;
+  }
+  .questions .slides .slide img {
+    width: 5rem;
+    height: 3rem;
+  }
+  .questions .cards {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 25.43rem));
+    justify-content: center;
+  }
+  .courses .content-course h3 {
+    font-size: 0.9rem;
+  }
+  .courses .content-course p {
+    margin-top: 0;
+    width: 60%;
+    font-size: 0.6rem;
+  }
+  .partners {
+    height: fit-content;
+  }
+  .partners .left {
+    margin: auto;
+  }
+
+  footer {
+    height: fit-content;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  footer .about-novel {
+    max-width: 30rem;
+  }
+  footer h3 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+  }
+  footer .contact-us {
+    max-width: 14rem;
+  }
+  footer .contact-us p {
+    font-size: 0.8rem;
+  }
+  .links li {
+    margin-top: 0.5rem;
+  }
+  .links li a {
+    font-size: 1rem;
+  }
+  footer .about-novel p {
+    font-size: 1rem;
+  }
+  footer .news {
+    max-width: 30rem;
+  }
+  footer .important-links {
+    max-width: 12rem;
+  }
+  footer .news p {
+    font-size: 0.9rem;
+  }
+  footer .news .social {
+    padding-bottom: 1rem;
+  }
+  footer .news button {
+    font-size: 1.5rem;
+  }
+  .copywrite p {
+    font-size: 1.1rem;
+  }
+  .social a i {
+    font-size: 2rem;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about .novel-logo {
+    width: 100%;
+  }
+  .team .swiper {
+  width: 100%;
+}
+.cards {
+  grid-template-columns: 1fr;
+}
+
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 16px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+  }
+  #hamburger {
+    display: block;
+    }
+.menu {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    right: -100%;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--novel);
+    transition: all 0.5s;
+    align-items: center;
+  } .menu.active {
+    right: -10%;
+  }
+header .menu li a {
+  margin: .5rem 0;
+  display: block;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+  .about {
+    grid-template-columns: 1fr;
+  }
+  .about .about-content {
+    max-width: 90%;
+  }
+header .menu li:hover a {
+  transform: translateY(.5rem);
+}
+  .content .connection span {
+    margin-top: 0.5rem;
+  }
+  .content span,
+  a {
+    font-size: 0.7rem;
+  }
+  .about,
+  .services {
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .services .boxs {
+    justify-content: center;
+  }
+  .questions .slides .slide img {
+    width: 5rem;
+    height: 3rem;
+  }
+  .questions .cards {
+    grid-template-columns:repeat(3,1fr);
+    justify-content: center;
+  }
+  .courses .content-course h3 {
+    font-size: 0.9rem;
+  }
+  .courses .content-course p {
+    margin-top: 0;
+    width: 60%;
+    font-size: 0.6rem;
+  }
+  .partners {
+    height: fit-content;
+  }
+  .partners .left {
+    margin: auto;
+  }
+  footer {
+    height: fit-content;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  footer .about-novel {
+    max-width: 30rem;
+  }
+  footer h3 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+  }
+  footer .contact-us {
+    max-width: 14rem;
+  }
+  footer .contact-us p {
+    font-size: 0.8rem;
+  }
+  .links li {
+    margin-top: 0.5rem;
+  }
+  .links li a {
+    font-size: 1rem;
+  }
+  footer .about-novel p {
+    font-size: 1rem;
+  }
+  footer .news {
+    max-width: 30rem;
+  }
+  footer .important-links {
+    max-width: 12rem;
+  }
+  footer .news p {
+    font-size: 0.9rem;
+  }
+  footer .news .social {
+    padding-bottom: 1rem;
+  }
+  footer .news button {
+    font-size: 1.5rem;
+  }
+  .copywrite p {
+    font-size: 1.1rem;
+  }
+  .social a i {
+    font-size: 2rem;
+  }
+  .about {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .services .boxs {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .team .cards-container .card {
+    max-width: 48%;
+  }
+  .courses img {
+    max-width: 90%;
+  }
+  .novel-logo img {
+    width: 90%;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+  html {
+    font-size: 18px;
+  }
+  .content .connection span {
+    margin-top: 0.5rem;
+  }
+  .content span,
+  a {
+    font-size: 0.7rem;
+  }
+  .about,
+  .services {
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .services .boxs {
+    justify-content: center;
+  }
+  .questions .slides .slide img {
+    width: 5rem;
+    height: 3rem;
+  }
+  .questions .cards {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 25.43rem));
+    justify-content: center;
+  }
+  .courses .content-course h3 {
+    font-size: 0.9rem;
+  }
+  .courses .content-course p {
+    margin-top: 0;
+    width: 60%;
+    font-size: 0.8rem;
+  }
+  .partners {
+    height: fit-content;
+  }
+  .partners .left {
+    margin: auto;
+  } 
+  .team .cards-container .card a {
+    font-size: 0.6rem;
+  }
+  footer {
+    height: fit-content;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  footer .about-novel {
+    max-width: 30rem;
+  }
+  footer h3 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+  }
+  footer .contact-us {
+    max-width: 14rem;
+  }
+  footer .contact-us p {
+    font-size: 0.8rem;
+  }
+  .links li {
+    margin-top: 0.5rem;
+  }
+  .links li a {
+    font-size: 1.1rem;
+  }
+  footer .about-novel p {
+    font-size: 1rem;
+  }
+  footer .news {
+    max-width: 30rem;
+  }
+  footer .important-links {
+    max-width: 12rem;
+  }
+  footer .news p {
+    font-size: 0.9rem;
+  }
+  footer .news .social {
+    padding-bottom: 1rem;
+  }
+  footer .news button {
+    font-size: 1.5rem;
+  }
+  .copywrite p {
+    font-size: 1.1rem;
+  }
+  .social a i {
+    font-size: 2rem;
+  }
+}
